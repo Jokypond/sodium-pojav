@@ -96,8 +96,7 @@ public class BakedGlyphMixin {
      * @reason Use intrinsics
      * @author JellySquid
      */
-    // TODO: Restore this for 1.21.6; it breaks name tag backgrounds for some unknown reason.
-    //@Inject(method = "buildEffect", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "buildEffect", at = @At("HEAD"), cancellable = true)
     private void drawEffectFast(BakedGlyph.Effect effect, float offset, float depthOffset, int c, VertexConsumer vertexConsumer, int light, Matrix4f matrix, CallbackInfo ci) {
         var writer = VertexConsumerUtils.convertOrLog(vertexConsumer);
 
@@ -109,8 +108,8 @@ public class BakedGlyphMixin {
 
         float x1 = effect.x0();
         float x2 = effect.x1();
-        float h1 = effect.y0();
-        float h2 = effect.y1();
+        float h1 = effect.y1(); // Yes, this is swapped in 1.21.6+.
+        float h2 = effect.y0();
         float z = depthOffset;
 
         int color = ColorARGB.toABGR(c);
