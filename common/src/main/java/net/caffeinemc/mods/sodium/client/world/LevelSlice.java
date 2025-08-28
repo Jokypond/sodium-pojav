@@ -92,6 +92,8 @@ public final class LevelSlice implements BlockAndTintGetter {
     private final @Nullable Int2ReferenceMap<BlockEntity>[] blockEntityArrays;
 
     // (Local Section -> Block Entity Render Data) table.
+    // This is accessed by a self-mixin in the Fabric package.
+    @SuppressWarnings("MismatchedReadAndWriteOfArray")
     private final @Nullable Int2ReferenceMap<Object>[] blockEntityRenderDataArrays;
 
     // (Local Section -> Model Data) table.

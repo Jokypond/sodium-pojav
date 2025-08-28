@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 public class NeoForgeLevelAccess implements PlatformLevelAccess {
     @Override
     public @Nullable Object getBlockEntityData(BlockEntity blockEntity) {
-        return null;//((RenderDataBlockEntity) blockEntity).getRenderData();
+        return null; // NeoForge does not have an equivalent API.
     }
 
     @Override
