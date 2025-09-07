@@ -2,9 +2,9 @@
 
 object BuildConfig {
     val MINECRAFT_VERSION: String = "1.21.8"
-    val NEOFORGE_VERSION: String = "21.8.13"
-    val FABRIC_LOADER_VERSION: String = "0.16.14"
-    val FABRIC_API_VERSION: String = "0.129.0+1.21.8"
+    val NEOFORGE_VERSION: String = "21.8.46"
+    val FABRIC_LOADER_VERSION: String = "0.17.2"
+    val FABRIC_API_VERSION: String = "0.133.4+1.21.8"
 
     // This value can be set to null to disable Parchment.
     val PARCHMENT_VERSION: String? = null
