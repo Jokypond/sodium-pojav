@@ -9,13 +9,7 @@ base {
 }
 
 repositories {
-    maven("https://maven.pkg.github.com/ims212/FRAPI-Testing") {
-        credentials {
-            username = "IMS212"
-            // Read only token
-            password = "ghp_" + "DEuGv0Z56vnSOYKLCXdsS9svK4nb9K39C1Hn"
-        }
-    }
+    maven("https://maven.irisshaders.dev/releases")
 
     maven {
         name = "Maven for PR #2297" // https://github.com/neoforged/NeoForge/pull/2297
