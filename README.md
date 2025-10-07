@@ -28,8 +28,7 @@ not come with any support or warranty. It is often the case they have issues and
 
 The latest nightly build for each current branch of development can be downloaded below.
 
-- Minecraft 1.21.4 (latest): [Download nightly](https://nightly.link/CaffeineMC/sodium/workflows/build-commit/dev/sodium-artifacts-dev.zip) or [View all builds](https://github.com/CaffeineMC/sodium/actions/workflows/build-commit.yml?query=branch%3Adev)
-- Minecraft 1.21.3: [Download nightly](https://nightly.link/CaffeineMC/sodium/workflows/build-commit/1.21.3%2Fstable/sodium-artifacts-1.21.3-stable.zip) or [View all builds](https://github.com/CaffeineMC/sodium/actions/workflows/build-commit.yml?query=branch%3A1.21.3%2Fstable)
+- Minecraft 1.21.8: [Download nightly](https://nightly.link/CaffeineMC/sodium/workflows/build-commit/dev/sodium-artifacts-dev.zip) or [View all builds](https://github.com/CaffeineMC/sodium/actions/workflows/build-commit.yml?query=branch%3Adev)
 - Minecraft 1.21.1: [Download nightly](https://nightly.link/CaffeineMC/sodium/workflows/build-commit/1.21.1%2Fstable/sodium-artifacts-1.21.1-stable.zip) or [View all builds](https://github.com/CaffeineMC/sodium/actions/workflows/build-commit.yml?query=branch%3A1.21.1%2Fstable)
 
 ### 🖥️ Installation
