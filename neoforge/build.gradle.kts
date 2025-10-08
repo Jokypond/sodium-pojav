@@ -11,15 +11,6 @@ base {
 repositories {
     maven("https://maven.irisshaders.dev/releases")
 
-    maven {
-        name = "Maven for PR #2639" // https://github.com/neoforged/NeoForge/pull/2639
-        url = uri("https://prmaven.neoforged.net/NeoForge/pr2639")
-        content {
-            includeModule("net.neoforged", "neoforge")
-            includeModule("net.neoforged", "testframework")
-        }
-    }
-
     maven("https://maven.su5ed.dev/releases")
     maven("https://maven.neoforged.net/releases/")
 }
