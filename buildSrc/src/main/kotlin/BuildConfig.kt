@@ -10,7 +10,7 @@ object BuildConfig {
     val PARCHMENT_VERSION: String? = null
 
     // https://semver.org/
-    var MOD_VERSION: String = "0.7.0"
+    var MOD_VERSION: String = "0.7.1"
 
     fun createVersionString(project: Project): String {
         val builder = StringBuilder()
