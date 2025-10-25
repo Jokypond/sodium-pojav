@@ -1,3 +1,6 @@
+> [!Caution]
+> You will not get any official support from CaffeineMC.
+
 <img src="common/src/main/resources/sodium-icon.png" width="128">
 
 # Sodium
