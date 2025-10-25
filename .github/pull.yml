@@ -1,0 +1,6 @@
+version: "1"
+rules:
+  - base: pull
+    upstream: Jokyoond:pull
+    mergeMethod: rebase
+    mergeUnstable: true
