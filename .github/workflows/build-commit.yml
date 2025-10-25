@@ -39,3 +39,12 @@ jobs:
         with:
           name: sodium-artifacts-${{ steps.ref.outputs.branch }}
           path: build/mods/*.jar
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: build/mods/*.jar
+          tag_name: Actions Release ${{ github.run_number }}
+          make_latest: true
