@@ -39,6 +39,12 @@ jobs:
         with:
           name: sodium-artifacts-${{ steps.ref.outputs.branch }}
           path: build/mods/*.jar
+          
+      - name: Create Tag
+        uses: negz/create-tag@v1
+        with:
+          token: '${{ secrets.GIT_TOKEN }}'
+          version: '${{ github.run_number }}'
 
       - name: Release
         uses: softprops/action-gh-release@v2
