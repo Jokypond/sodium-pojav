@@ -258,15 +258,6 @@ public abstract class LevelRendererMixin implements LevelRendererExtension {
 
     // Exclusive to NeoForge, allow to fail.
     @SuppressWarnings("all")
-    @Inject(method = "extractVisibleBlockEntities(Lnet/minecraft/client/Camera;FLnet/minecraft/client/renderer/state/LevelRenderState;Lnet/minecraft/client/renderer/culling/Frustum;)V", at = @At("HEAD"), cancellable = true, require = 0)
-    private void extractVisibleBlockEntities$neoForge(Camera camera, float f, LevelRenderState levelRenderState, Frustum frustum, CallbackInfo ci) {
-        ci.cancel();
-
-        this.renderer.extractBlockEntities(camera, f, this.destructionProgress, levelRenderState);
-    }
-
-    // Exclusive to NeoForge, allow to fail.
-    @SuppressWarnings("all")
     @Inject(method = "iterateVisibleBlockEntities", at = @At("HEAD"), cancellable = true, require = 0)
     public void replaceBlockEntityIteration(Consumer<BlockEntity> blockEntityConsumer, CallbackInfo ci) {
         ci.cancel();
