@@ -40,12 +40,14 @@ jobs:
           name: sodium-artifacts-${{ steps.ref.outputs.branch }}
           path: build/mods/*.jar
           
-      - name: Create Tag
-        uses: negz/create-tag@v1
+      - name: Generate Release Tag
+        uses: mokhlesurr031/github-manual-release@v2.0.2
         with:
-          token: '${{ secrets.GIT_TOKEN }}'
-          version: 'nightly-${{ github.run_number }}'
-
+          release-tag-number: nightly-${{ github.run_number }}
+          user-email: ${{ secrets.USER_EMAIL }}
+          user-name: ${{ secrets.USER_NAME }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Release
         uses: softprops/action-gh-release@v2
         env:
