@@ -1,6 +1,6 @@
 version: "1"
 rules:
-  - base: pull
-    upstream: Jokyoond:pull
+  - base: main
+    upstream: CaffeineMC:dev
     mergeMethod: rebase
     mergeUnstable: true
