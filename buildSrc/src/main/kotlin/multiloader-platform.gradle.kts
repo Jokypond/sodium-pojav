@@ -42,7 +42,7 @@ publishing {
             maven {
                 name = "CaffeineMC"
                 url = uri("https://maven.caffeinemc.net".let {
-                    if (isReleaseBuild) "$it/release" else "$it/snapshots"
+                    if (isReleaseBuild) "$it/releases" else "$it/snapshots"
                 })
 
                 credentials {
