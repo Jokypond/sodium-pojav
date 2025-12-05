@@ -1,0 +1,6 @@
+version: "1"
+rules:
+  - base: main
+    upstream: CaffeineMC:dev
+    mergeMethod: rebase
+    mergeUnstable: true
