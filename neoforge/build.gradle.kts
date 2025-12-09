@@ -33,6 +33,9 @@ val configurationCommonModJava: Configuration = configurations.create("commonMod
 val configurationCommonApiJava: Configuration = configurations.create("commonApiJava") {
     isCanBeResolved = true
 }
+val configurationCommonApiSources: Configuration = configurations.create("apiSources") {
+    isCanBeResolved = true
+}
 val configurationCommonModResources: Configuration = configurations.create("commonModResources") {
     isCanBeResolved = true
 }
@@ -48,6 +51,8 @@ dependencies {
     configurationCommonModJava(project(path = ":common", configuration = "commonMainJava"))
     configurationCommonApiJava(project(path = ":common", configuration = "commonApiJava"))
     configurationCommonServiceJava(project(path = ":common", configuration = "commonBootJava"))
+
+    configurationCommonApiSources(project(path = ":common", configuration = "commonApiSources"))
 
     configurationCommonModResources(project(path = ":common", configuration = "commonMainResources"))
     configurationCommonModResources(project(path = ":common", configuration = "commonApiResources"))
@@ -87,6 +92,16 @@ val apiJar = tasks.register<Jar>("apiJar") {
     archiveClassifier = "api"
 
     destinationDirectory.set(file(rootProject.layout.buildDirectory).resolve("api"))
+}
+
+val apiSourcesJar = tasks.register<Jar>("apiSourcesJar") {
+    from(configurationCommonApiSources)
+
+    from(rootDir.resolve("LICENSE.md"))
+
+    archiveClassifier = "api-sources"
+
+    destinationDirectory.set(file(rootProject.layout.buildDirectory).resolve("api-sources"))
 }
 
 tasks.jar {
@@ -196,6 +211,10 @@ publishing {
 
             artifact(apiJar) {
                 classifier = null
+            }
+
+            artifact(apiSourcesJar) {
+                classifier = "sources"
             }
 
             pom.packaging = "jar"
