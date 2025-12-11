@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+I will not be updating this project anymore. I recommend to use a different mod, like [Podium](https://modrinth.com/mod/podium) instead.
+
 <img src="common/src/main/resources/sodium-icon.png" width="128">
 
 # Sodium
